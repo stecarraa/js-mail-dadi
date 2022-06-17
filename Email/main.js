@@ -19,17 +19,25 @@ const userMail = prompt('Inserisci il tuo indirizzo email');
 let mailExist = false
 
 for(let i = 0; i < mailList.length; i++){
-
-    if(mailList[i] === userMail){
-        mailExist = true
-
-    document.getElementById('message').innerHTML='La mail: ' + userMail + ' esiste già, registrati con un\'altra mail '
-
+    if(userMail === mailList[i]){
+        mailExist = true;
     }
-    else{
-        document.getElementById('message').innerHTML='La mail: ' + userMail + ' non è stata trovata, puoi procedere con la registrazione '
+   
 
-    }
+}
+
+
+
+if(mailExist == true){
+    
+
+document.getElementById('present').innerHTML='La mail: ' + userMail + ' esiste già, registrati con un\'altra mail '
+
+}
+else{
+
+
+    document.getElementById('absent').innerHTML='La mail: ' + userMail + ' non è stata trovata, puoi procedere con la registrazione '
 
 }
 
